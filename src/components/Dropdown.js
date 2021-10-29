@@ -100,7 +100,7 @@ function Dropdown() {
   const geoLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       axios(
-        `http://api.openweathermap.org/geo/1.0/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&limit=5&appid=66f077be60e3ba7f90d651bb008aaba8`
+        `https://api.openweathermap.org/geo/1.0/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&limit=5&appid=66f077be60e3ba7f90d651bb008aaba8`
       ).then((response) => {
         providedData.setSelectedCity(response.data[0].name);
         if (selectDOM) {
